@@ -357,16 +357,16 @@ const people = [
 
 people.forEach( elem => {
 
-let tableElem = document.querySelector('tr')
+let tableElem = document.querySelector('dashboard tr') || ''
 let tableElemClone = tableElem.cloneNode(true)
 let thElemClone = tableElemClone.children
 
-  thElemClone[0].textContent = elem.name || ''
-  thElemClone[1].textContent = elem.sex  === 'm' ? 'Male' : 'Female' || ''
-  thElemClone[2].textContent = elem.born || ''
-  thElemClone[3].textContent = elem.died  || ''
-  thElemClone[4].textContent = elem.died - elem.born || ''
-  thElemClone[5].textContent = Math.ceil(  elem.died / 100 ) || ''
+  thElemClone[0].textContent = elem.name
+  thElemClone[1].textContent = elem.sex  === 'm' ? 'Male' : 'Female'
+  thElemClone[2].textContent = elem.born
+  thElemClone[3].textContent = elem.died
+  thElemClone[4].textContent = elem.died - elem.born
+  thElemClone[5].textContent = Math.floor(  elem.died / 100 )
 
   tableElem.after(tableElemClone)
 })
