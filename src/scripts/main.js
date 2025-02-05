@@ -357,7 +357,7 @@ const people = [
 
 people.forEach( elem => {
 
-let tableElem = document.querySelector('dashboard tr') || ''
+let tableElem = document.querySelector('tr') || ''
 let tableElemClone = tableElem.cloneNode(true)
 let thElemClone = tableElemClone.children
 
